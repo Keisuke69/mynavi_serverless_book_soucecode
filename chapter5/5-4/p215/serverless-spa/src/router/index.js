@@ -11,6 +11,12 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
+      path: '/photo',
+      name: 'photo',
+      component: Photo,
+      beforeEnter: requireAuth
+    },
+    {
       path: '/login',
       name: 'login',
       component: Login
