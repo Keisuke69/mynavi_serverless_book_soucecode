@@ -16,6 +16,13 @@ export default new Router({
       component: Login
     },
     {
+      path: '/logout',
+      beforeEnter(to, from, next) {
+        auth.logout()
+        next('/')
+      }
+    },
+    {
       path: '/signup',
       name: 'signup',
       component: Signup

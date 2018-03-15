@@ -141,4 +141,14 @@ export default {
             return false;
         }
     },
+    logout: function () {
+        var poolData = {
+            UserPoolId: appConfig.UserPoolId,
+            ClientId: appConfig.UserPoolClientId
+        };
+        var userPool = new CognitoUserPool(poolData);
+        userPool.getCurrentUser().signOut()
+        this.onChange(false)
+        console.log("Successfully logged out.")
+    }
 }
