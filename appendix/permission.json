@@ -5,28 +5,28 @@
             "Effect": "Allow",
             "Action": [
                 "logs:*",
+                "dynamodb:ListStreams"
             ],
             "Resource": "*"
         },
         {
             "Effect": "Allow",
             "Action": [
-                "dynamodb:ListStreams",
                 "dynamodb:GetRecords",
                 "dynamodb:GetShardIterator",
                 "dynamodb:DescribeStream"
             ],
             "Resource": [
-                "arn:aws:dynamodb:ap-northeast-1:177352676277:table/photos"
+                "arn:aws:dynamodb:ap-northeast-1:111122223333:table/photos/stream/YYYY-MM-DDTHH:MM:SS.SSS"
             ]
         },
         {
             "Effect": "Allow",
             "Action": [
-                "s3:DeleteObject",
+                "s3:DeleteObject"
             ],
             "Resource": [
-                "arn:aws:s3:::serverless-app-photos-177352676277/*"
+                "arn:aws:s3:::serverless-app-photos/*"
             ]
         }
     ]
