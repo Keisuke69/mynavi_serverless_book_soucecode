@@ -150,5 +150,6 @@ export default {
         userPool.getCurrentUser().signOut()
         this.onChange(false)
         console.log("Successfully logged out.")
-    }
+    },
+    onChange: function () { },
 }

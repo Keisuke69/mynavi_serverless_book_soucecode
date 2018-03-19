@@ -141,4 +141,5 @@ export default {
             return false;
         }
     },
+    onChange: function () { },
 }

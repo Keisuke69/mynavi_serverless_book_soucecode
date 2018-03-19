@@ -163,5 +163,6 @@ export default {
             id_token = result.getIdToken().getJwtToken()
         })
         return id_token
-    }
+    },
+    onChange: function () { },
 }

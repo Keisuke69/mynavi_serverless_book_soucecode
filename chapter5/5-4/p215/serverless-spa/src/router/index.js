@@ -5,6 +5,7 @@ import Signup from '@/components/Signup'
 import Confirm from '@/components/Confirm'
 import Login from '@/components/Login'
 import auth from '@/auth'
+import Photo from '@/components/Photo'
 
 Vue.use(Router)
 

@@ -11,10 +11,10 @@ Resources:
       Description: ''
       MemorySize: 128
       Timeout: 15
-      Role: 'arn:aws:iam::177352676277:role/lambda-dynamodb-access'
+      Role: 'arn:aws:iam::111122223333:role/lambda-dynamodb-access'
       Environment:
         Variables:
-          BUCKET_NAME: serverless-app-photos-177352676277
+          BUCKET_NAME: serverless-app-photos
           TABLE_NAME: photos
   updateImage:
     Type: 'AWS::Serverless::Function'
@@ -25,10 +25,10 @@ Resources:
       Runtime: python3.6
       MemorySize: 128
       Timeout: 15
-      Role: 'arn:aws:iam::177352676277:role/lambda-dynamodb-access'
+      Role: 'arn:aws:iam::111122223333:role/lambda-dynamodb-access'
       Environment:
         Variables:
-          BUCKET_NAME: serverless-app-photos-177352676277
+          BUCKET_NAME: serverless-app-photos
           TABLE_NAME: photos
   getImages:
     Type: 'AWS::Serverless::Function'
@@ -37,12 +37,12 @@ Resources:
       CodeUri: getImages/
       Handler: get-images.lambda_handler
       MemorySize: 128
-      Role: 'arn:aws:iam::177352676277:role/lambda-dynamodb-access'
+      Role: 'arn:aws:iam::111122223333:role/lambda-dynamodb-access'
       Runtime: python3.6
       Timeout: 3
       Environment:
         Variables:
-          BUCKET_NAME: serverless-app-photos-177352676277
+          BUCKET_NAME: serverless-app-photos
           TABLE_NAME: photos
   getImageById:
     Type: 'AWS::Serverless::Function'
@@ -51,12 +51,12 @@ Resources:
       CodeUri: getImageById/
       Handler: get-image-by-id.lambda_handler
       MemorySize: 128
-      Role: 'arn:aws:iam::177352676277:role/lambda-dynamodb-access'
+      Role: 'arn:aws:iam::111122223333:role/lambda-dynamodb-access'
       Runtime: python3.6
       Timeout: 3
       Environment:
         Variables:
-          BUCKET_NAME: serverless-app-photos-177352676277
+          BUCKET_NAME: serverless-app-photos
           TABLE_NAME: photos
   deleteImageById:
     Type: 'AWS::Serverless::Function'
@@ -65,12 +65,12 @@ Resources:
       CodeUri: deleteImageById/
       Handler: delete-image-by-id.lambda_handler
       MemorySize: 128
-      Role: 'arn:aws:iam::177352676277:role/lambda-dynamodb-access'
+      Role: 'arn:aws:iam::111122223333:role/lambda-dynamodb-access'
       Runtime: python3.6
       Timeout: 3
       Environment:
         Variables:
-          BUCKET_NAME: serverless-app-photos-177352676277
+          BUCKET_NAME: serverless-app-photos
           TABLE_NAME: photos
   Api:
     Type: 'AWS::Serverless::Api'
@@ -123,7 +123,7 @@ Resources:
                     statusCode: "200"
                     responseParameters:
                       method.response.header.Access-Control-Allow-Headers : "'Content-Type,X-Amz-Date,Authorization,X-Api-Key'"
-                      method.response.header.Access-Control-Allow-Methods : "'GET, POST, PUT'"
+                      method.response.header.Access-Control-Allow-Methods : "'GET, POST, PUT, DELETE'"
                       method.response.header.Access-Control-Allow-Origin : "'*'"
                     responseTemplates:
                       application/json: |
@@ -169,7 +169,7 @@ Resources:
                     statusCode: "200"
                     responseParameters:
                       method.response.header.Access-Control-Allow-Headers : "'Content-Type,X-Amz-Date,Authorization,X-Api-Key'"
-                      method.response.header.Access-Control-Allow-Methods : "'GET, POST, PUT'"
+                      method.response.header.Access-Control-Allow-Methods : "'GET, POST, PUT, DELETE'"
                       method.response.header.Access-Control-Allow-Origin : "'*'"
                     responseTemplates:
                       application/json: |
