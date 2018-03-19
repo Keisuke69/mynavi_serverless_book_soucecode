@@ -95,6 +95,6 @@
             "type": "S3",
             "location": "<bucket-name>"
         },
-        "name": "serverless-pipeline",
+        "name": "serverless-pipeline"
     }
 }
