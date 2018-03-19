@@ -14,7 +14,7 @@ Resources:
       Role: 'arn:aws:iam::111122223333:role/lambda-dynamodb-access'
       Environment:
         Variables:
-          BUCKET_NAME: serverless-app-photos-111122223333
+          BUCKET_NAME: serverless-app-photos
           TABLE_NAME: photos
       Events:
         Api:
@@ -34,7 +34,7 @@ Resources:
       Role: 'arn:aws:iam::111122223333:role/lambda-dynamodb-access'
       Environment:
         Variables:
-          BUCKET_NAME: serverless-app-photos-111122223333
+          BUCKET_NAME: serverless-app-photos
           TABLE_NAME: photos
       Events:
         Api:

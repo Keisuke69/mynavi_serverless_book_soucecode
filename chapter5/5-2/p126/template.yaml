@@ -36,12 +36,12 @@ Resources:
         Variables:
           BUCKET_NAME: serverless-app-photos
           TABLE_NAME: photos
-      # Events:
-      #   Api:
-      #     Type: Api
-      #     Properties:
-      #       Path: /images
-      #       Method: put
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /images
+            Method: put
   getImages:
     Type: 'AWS::Serverless::Function'
     Properties:
