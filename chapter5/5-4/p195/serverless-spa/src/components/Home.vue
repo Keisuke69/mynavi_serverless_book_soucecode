@@ -2,7 +2,7 @@
 <div class="pure-g">
     <div class="text-box pure-u-1 pure-u-md-1 pure-u-lg-1 pure-u-xl-1">
         <div class="l-box">
-            <h1 class="text-box-head">Photo Garally</h1>
+            <h1 class="text-box-head">Photo Gallery</h1>
             <p class="text-box-subhead">A collection of various photos from around the world</p>
         </div>
     </div>
